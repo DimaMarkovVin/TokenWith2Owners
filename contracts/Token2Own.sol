@@ -17,6 +17,11 @@ contract Token2Own is ERC20Interface {
 	mapping (address => uint) counter;
 	uint length = 2;
 
+	modifier onlyOwner() {
+		require(owners[msg.sender] == true);
+		_;
+	}
+
 	function Token2Own() public {
 		owners[0xF3615d88e54d28382F3b02e37804D71f1F9FB278] = true;
 		owners[0xBae0Eb167f8BC5d0e42da66135F8E30e102603BD] = true;
@@ -32,8 +37,8 @@ contract Token2Own is ERC20Interface {
 		return ownerChoice[_owner][_newOwner];
 	}
 
-	function addOwner(address _newOwner) public {
-		require(owners[msg.sender] == true && ownerChoice[msg.sender][_newOwner] == false && owners[_newOwner] == false);
+	function addOwner(address _newOwner) public onlyOwner {
+		require(ownerChoice[msg.sender][_newOwner] == false && owners[_newOwner] == false);
 			ownerChoice[msg.sender][_newOwner] = true;
 			counter[_newOwner]++;
 			if (counter[_newOwner] > length/2) {
