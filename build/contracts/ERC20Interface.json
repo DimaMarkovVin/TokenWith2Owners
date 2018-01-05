@@ -180,10 +180,10 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.4.18;\r\n\r\ncontract ERC20Interface {\r\n\tfunction totalSupply() constant returns (uint256 totalSupply);\r\n    function balanceOf(address _owner) constant returns (uint256 balance);\r\n    function transfer(address _to, uint256 _value) returns (bool success);\r\n    function transferFrom(address _from, address _to, uint256 _value) returns (bool success);\r\n    function approve(address _spender, uint256 _value) returns (bool success);\r\n    function allowance(address _owner, address _spender) constant returns (uint256 remaining);\r\n    event Transfer(address indexed _from, address indexed _to, uint256 _value);\r\n\tevent Approval(address indexed _owner, address indexed _spender, uint256 _value);\r\n}",
-  "sourcePath": "C:\\Users\\Дима\\Token2Own\\contracts\\ERC20Interface.sol",
+  "sourcePath": "E:\\Work\\Token2Own\\contracts\\ERC20Interface.sol",
   "ast": {
     "attributes": {
-      "absolutePath": "/C/Users/Дима/Token2Own/contracts/ERC20Interface.sol",
+      "absolutePath": "/E/Work/Token2Own/contracts/ERC20Interface.sol",
       "exportedSymbols": {
         "ERC20Interface": [
           68
@@ -1072,5 +1072,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-12-22T15:15:55.371Z"
+  "updatedAt": "2018-01-05T09:15:33.522Z"
 }
